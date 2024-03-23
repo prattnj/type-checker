@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="type-checker-java:jar">
+    <output-path>$PROJECT_DIR$/</output-path>
+    <root id="archive" name="type-checker-java.jar">
+      <element id="module-output" name="type-checker-java" />
+    </root>
+  </artifact>
+</component>
