@@ -122,7 +122,7 @@ public class TypeChecker {
         }
 
         ArrowType arrow = (ArrowType) left;
-        if (arrow.getArgument() != right) {
+        if (!arrow.getArgument().equals(right)) {
             throw new TypeCheckException("type mismatch in function argument and call: " + arrow.getArgument().getType() + ", " + right.getType());
         }
 
@@ -199,7 +199,7 @@ public class TypeChecker {
                 ObjectType object = (ObjectType) primitive;
                 StringBuilder sb = new StringBuilder("(object");
                 for (Attribute a : object.getAttributes()) {
-                    sb.append(" [ ").append(a.identifier()).append(" ").append(stringify(a.type())).append(" ]");
+                    sb.append(" [").append(a.identifier()).append(" ").append(stringify(a.type())).append("]");
                 }
                 sb.append(")");
                 yield sb.toString();
