@@ -11,4 +11,4 @@ while true; do
     expressions="${expressions}${line}\n"
 done
 
-echo -e "$expressions" | java -jar type-checker.jar
+echo -e "$expressions" | java -jar type-checker-java.jar
