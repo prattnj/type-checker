@@ -95,7 +95,7 @@ public class TypeChecker {
             throw new TypeCheckException("first expression in a conditional statement must be a boolean");
         }
 
-        if (consequent.equals(alternate)) {
+        if (!consequent.equals(alternate)) {
             throw new TypeCheckException("type mismatch in conditional branches: " + consequent.getType() + ", " + alternate.getType());
         }
 
